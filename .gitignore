@@ -1,19 +1,37 @@
-# Ignore Python virtual environments
+# =========================
+#  Python Playwright Project
+# =========================
+
+# 1️⃣ Virtual Environment
 venv/
 
-# Byte-compiled / cache files
+# 2️⃣ Byte-compiled / cache files
 __pycache__/
-*.pyc
+*.py[cod]
+*$py.class
+.pytest_cache/
 
-# VS Code settings
+# 3️⃣ VS Code / IDE settings
 .vscode/
+.idea/
 
-# OS files
+# 4️⃣ OS files
 .DS_Store
+Thumbs.db
 
-# Test reports / logs
+# 5️⃣ Test reports / logs (optional)
 reports/
 logs/
 
-# Environment variables
+# 6️⃣ Environment files
 .env
+.env.*
+
+# 7️⃣ PyInstaller / Build files (future-safe)
+build/
+dist/
+*.spec
+
+# 8️⃣ Temporary files
+*.log
+*.tmp
