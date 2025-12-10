@@ -6,11 +6,11 @@ def run(playwright: Playwright) -> None:
     browser = playwright.chromium.launch(headless=False)
     context = browser.new_context()
     page = context.new_page()
-    page.goto("https://www.google.com/")
-    page.get_by_role("combobox", name="Tìm kiếm").click()
-    page.get_by_role("combobox", name="Tìm kiếm").fill("something just like this")
-
+    page.goto("https://practice.automationtesting.in/")
+    
     # ---------------------
+    context.close()
+    browser.close()
 
 
 with sync_playwright() as playwright:

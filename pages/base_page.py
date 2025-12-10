@@ -18,3 +18,6 @@ class BasePage:
 
     def wait_for_visible(self, locator: str):
         self.page.wait_for_selector(locator)
+
+    def count(self, locator: str):
+        return self.page.locator(locator).count()

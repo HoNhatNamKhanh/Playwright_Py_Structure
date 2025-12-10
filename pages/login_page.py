@@ -1,11 +1,13 @@
 from pages.base_page import BasePage
+from playwright.sync_api import Page
 
 class LoginPage(BasePage):
-
-    # Locators
-    username_input = "User_mail"
-    password_input = "User_Password"
-    login_button = "Locator"
+    def __init__(self, page: Page):
+            self.page = page
+            # Set locators here
+            self.username_input = "#username"
+            self.password_input = "#password"
+            self.login_button = 'input[value="Login"]'
 
     # Actions
     def enter_username(self, username: str):
